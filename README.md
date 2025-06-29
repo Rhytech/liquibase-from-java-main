@@ -41,7 +41,7 @@ In the root directory of the project, execute the following command:
 
 ```bash
 mvn clean compile exec:java
-
+```
 
 ## 📄 License
 
