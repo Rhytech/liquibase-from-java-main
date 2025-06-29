@@ -15,6 +15,11 @@ This project demonstrates how to run Liquibase from a Java application using a P
 - Uses a PostgreSQL database connection.
 - Change log schema and target schema are configurable in the `Main.java` file.
 - Supports easy migration to MySQL or other databases by replacing the PostgreSQL JDBC dependency in `pom.xml`.
+- Java-based Liquibase runner with XML changelogs
+- Archiving table data through controlled change sets
+- Versioned database schema changes (tables, constraints, indexes)
+- Maintain and deploy stored procedures/functions as part of database migrations
+- Supports PostgreSQL (can be extended to MySQL or others)
 
 ## ⚙️ Configuration
 
