@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+ xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+           http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<include file="/changelog/archive_schema_change_process/database_create_schema.sql"/>
+
+	<changeSet id="sp_create_archive_x_feature_tables" author="Rhythm" runOnChange="true">
+		<sqlFile endDelimiter="" path="/changelog/archive_schema_change_process/sp_create_archive_x_feature_tables.sql"/>
+	</changeSet>
+	
+	<changeSet id="fn_check_x_feature_tables_column_count" author="Rhythm" runOnChange="true">
+		<sqlFile endDelimiter="" path="/changelog/archive_schema_change_process/fn_check_x_feature_tables_column_count.sql"/>
+	</changeSet>
+	
+	<changeSet id="fn_check_archived_tables_column_count" author="Rhythm" runOnChange="true">
+		<sqlFile endDelimiter="" path="/changelog/archive_schema_change_process/fn_check_archived_tables_column_count.sql"/>
+	</changeSet>
+
+	<changeSet id="sp_archive_x_feature_tables" author="Rhythm" runOnChange="true">
+		<sqlFile endDelimiter="" path="/changelog/archive_schema_change_process/sp_archive_x_feature_tables.sql"/>
+	</changeSet>
+
+	<changeSet id="fn_archive_x_feature_tables" author="Rhythm" runOnChange="true">
+		<sqlFile endDelimiter="" path="/changelog/archive_schema_change_process/fn_archive_x_feature_tables.sql"/>
+	</changeSet>
+	
+	<include file="/changelog/archive_schema_change_process/database_schema_migration.sql"/>
+	
+	<include file="/changelog/archive_schema_change_process/database_schema_migration_run_always.sql"/>
+	
+</databaseChangeLog>
